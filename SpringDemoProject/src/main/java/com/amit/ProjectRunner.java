@@ -12,8 +12,9 @@ public class ProjectRunner implements CommandLineRunner{
 	
 	@Override
 	public void run(String... args) throws Exception {
-		
+		System.out.println("Runner ========> ");
 		controller.home();
 	}
 
 }
+
