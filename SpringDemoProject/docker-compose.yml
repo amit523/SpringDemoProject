@@ -1,7 +1,10 @@
 version: "3.8"
+
 services:
   springboot-app:
-    build: 
+    build:
+      context: .
+      dockerfile: springdockerfile
     container_name: springboot-app
     ports:
       - "9090:9090"
