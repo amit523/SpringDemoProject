@@ -5,7 +5,7 @@ services:
         ports:
             - "9090:8080"
         networks :
-            - springboot-db-net
+             springboot-db-net
         depends_on :
             - mysqldb
         volumes :
@@ -14,7 +14,7 @@ services:
     mysqldb :
         image : mysql:5.7
         networks :
-            - springboot-db-net
+             springboot-db-net
         environment :
             - MYSQL_ROOT_PASSWORD=root
             - MYSQL_DATABASE=sbms
