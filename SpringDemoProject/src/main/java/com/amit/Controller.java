@@ -16,7 +16,7 @@ public class Controller {
 	@GetMapping("/{name}")
 	public String home(@PathVariable String name) {
 		
-		User u1 = new User(101l, name);
+		User u1 = new User( name);
 		repo.save(u1);
 		System.out.println(name+" saved in database...");
 		System.out.println("Home Method ");
@@ -30,4 +30,5 @@ public class Controller {
 	 
 	
 }
+
 
