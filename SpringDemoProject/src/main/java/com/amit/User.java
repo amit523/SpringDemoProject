@@ -26,13 +26,14 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public User(Long id, String name) {
+	public User( String name) {
 		super();
-		this.id = id;
+		
 		this.name = name;
 	}
     
     
 }
+
 
 
