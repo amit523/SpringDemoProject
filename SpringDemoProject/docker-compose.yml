@@ -6,7 +6,7 @@ services:
             - "9090:8080"
         networks :
             - springboot-db-net
-        depnds_on :
+        depends_on :
             - mysqldb
         volumes :
             - /data/springboot-app
