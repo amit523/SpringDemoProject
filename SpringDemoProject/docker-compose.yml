@@ -1,26 +1,29 @@
 services:
-    springboot-app:
-        image : springboot-app-image
-        container_name: springboot-app
-        ports:
-            - "9090:8080"
-        networks :
-             springboot-db-net
-        depends_on :
-            - mysqldb
-        volumes :
-            - /data/springboot-app
-            
-    mysqldb :
-        image : mysql:5.7
-        networks :
-             springboot-db-net
-        environment :
-            - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_DATABASE=sbms
-        volumes :
-            - /data/mysql
-networks :
-    springboot-db-net
+  springboot-app:
+    image: springboot-app-image
+    container_name: springboot-app
+    ports:
+      - "9090:8080"
+    networks:
+      - springboot-db-net
+    depends_on:
+      - mysqldb
+    volumes:
+      - springboot-data:/data
 
-        
+  mysqldb:
+    image: mysql:5.7
+    networks:
+      - springboot-db-net
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sbms
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+networks:
+  springboot-db-net:
+
+volumes:
+  springboot-data:
+  mysql-data:
