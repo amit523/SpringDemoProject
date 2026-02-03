@@ -1,10 +1,26 @@
-version: "3.8"
-
 services:
-  springboot-app:
-    build:
-      context: .
-      dockerfile: springdockerfile
-    container_name: springboot-app
-    ports:
-      - "9090:9090"
+    springboot-app:
+        image : springboot-app-image
+        container_name: springboot-app
+        ports:
+            - "9090:8080"
+        networks :
+            - springboot-db-net
+        depnds_on :
+            - mysqldb
+        volumes :
+            - /data/springboot-app
+            
+    mysqldb :
+        image : mysql:5.7
+        networks :
+            - springboot-db-net
+        environment :
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=sbms
+        volumes :
+            - /data/mysql
+networks :
+    springboot-db-net
+
+        
