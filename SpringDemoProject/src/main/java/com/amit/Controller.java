@@ -13,12 +13,12 @@ public class Controller {
 	@Autowired
 	private UserRepositoey  repo;
 
-	@GetMapping("/{name}")
-	public String home(@PathVariable String name) {
+	@GetMapping("/")
+	public String home() {
 		
-		User u1 = new User( name);
-		repo.save(u1);
-		System.out.println(name+" saved in database...");
+		//User u1 = new User( name);
+		//repo.save(u1);
+		//System.out.println(name+" saved in database...");
 		System.out.println("Home Method ");
 		return "*** This is Amit Jangra ***";
 	}
@@ -30,5 +30,6 @@ public class Controller {
 	 
 	
 }
+
 
 
