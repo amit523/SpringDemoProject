@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 	
-	@Autowired
-	private UserRepositoey  repo;
+	//@Autowired
+	//private UserRepositoey  repo;
 
 	@GetMapping("/")
 	public String home() {
@@ -30,6 +30,7 @@ public class Controller {
 	 
 	
 }
+
 
 
 
