@@ -9,16 +9,17 @@ import org.springframework.stereotype.Component;
 
 import jakarta.annotation.PostConstruct;
 
-@Component
+//@Component
 public class DBTest {
 
-    @Autowired
-    private DataSource dataSource;
+    //@Autowired
+   // private DataSource dataSource;
 
-    @PostConstruct
+    /*@PostConstruct
     public void testConnection() throws Exception {
         Connection con = dataSource.getConnection();
         System.out.println("✅ Database Connected Successfully!");
         con.close();
-    }
+    }*/
 }
+
