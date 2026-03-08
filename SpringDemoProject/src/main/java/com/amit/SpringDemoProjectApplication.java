@@ -2,13 +2,9 @@ package com.amit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
 
 @SpringBootApplication
-@EnableAutoConfiguration(exclude={
-org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.class,
-org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.class
-})
 public class SpringDemoProjectApplication {
 
 	public static void main(String[] args) {
